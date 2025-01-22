@@ -9,7 +9,7 @@ CREATE TABLE ADMIN (
 );
 
 INSERT INTO `admin` (`ID_ADMIN`, `LOGIN`, `MDP`) VALUES
-(2, 'admin1', '0192023a7bbd73250516f069df18b500'),
+(1, 'admin1', '0192023a7bbd73250516f069df18b500'),
 (3, 'Admin2', '60809c983da6d6e1198c78f23f7986cd'),
 (4, 'cj', 'f71dbe52628a3f83a77ab494817525c6'),
 (5, 'mosaic', '6d788fcb39cecfd54da7b065a8b75d1a');
