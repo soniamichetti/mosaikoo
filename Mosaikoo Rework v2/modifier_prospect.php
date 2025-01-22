@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $numero_telephone = $_POST["numero_telephone"];
     $ADRESSE_IP = $_POST["ADRESSE_IP"];
     $date_creation = $_POST["date_creation"];
+    $date_prospect = $_POST["date_prospect"];
     $Status = $_POST["Status"];
     $Projet = $_POST["Projet"];
     $IDP = $_GET["idp"];
@@ -24,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 VILLE = :VILLE, 
                 EMAIL = :EMAIL,
                 date_creation = :date_creation, 
+                date_prospect = :date_prospect, 
                 ADRESSE_IP = :ADRESSE_IP, 
                 id_etat = :Status, 
                 Projet = :Projet, 
@@ -41,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ':VILLE' => $VILLE,
         ':ADRESSE_IP' => $ADRESSE_IP,
         ':date_creation' => $date_creation,
+        ':date_prospect' => $date_prospect,
         ':Status' => $Status,
         ':Projet' =>$Projet,
         ':numero_telephone' => $numero_telephone,

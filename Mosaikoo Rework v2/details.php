@@ -20,7 +20,7 @@ if (isset($_GET['modif'])) {
 }
 
 // Stagiaire 2024 correction du code et de la base de donnée 
-$sql = "select id_etat,VILLE,EMAIL,NOM,PRENOM,LIBELLE, Date_prospect,id_prospect,numero_telephone,ADRESSE_IP,date_creation,Projet from prospect natural join etat_prospect where id_prospect='$modif'";
+$sql = "select id_etat,VILLE,EMAIL,NOM,PRENOM,LIBELLE, date_prospect,id_prospect,numero_telephone,ADRESSE_IP,date_creation,Projet from prospect natural join etat_prospect where id_prospect='$modif'";
 $resultat = $bdd->query($sql);
 
 ?>
@@ -76,6 +76,10 @@ $resultat = $bdd->query($sql);
 						<div>
                             <label>Création du client :</label>
                             <input type="date" name="date_creation" placeholder="date_creation" value="<?php echo $prospect->date_creation?>">
+                        </div>
+						<div>
+                            <label>Date de rendu :</label>
+                            <input type="date" name="date_prospect" placeholder="date_prospect" value="<?php echo $prospect->date_prospect?>">
                         </div>
 						<div>
 							<label>Status :</label>
