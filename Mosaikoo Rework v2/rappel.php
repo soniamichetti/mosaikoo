@@ -21,14 +21,14 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'sonia.michetti7@gmail.com'; // Ton adresse Gmail
-    $mail->Password = 'ylrr oive jvpa svtu';       // Ton mot de passe Gmail
+    $mail->Username = 'mail@gmail.com'; // Ton adresse Gmail
+    $mail->Password = 'mdpGmailScripté';       // Ton mot de passe Gmail
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 465;
 
     // Destinataires
-    $mail->setFrom('sonia.michetti7@gmail.com', 'MICHETTI Sonia'); // Envoyeur ('mail','NOM Prenom')
-    $mail->addAddress('sonia.michetti7@gmail.com', 'MICHETTI Sonia'); // Receveur ('mail','NOM Prenom)
+    $mail->setFrom('envoyeur@gmail.com', 'NOM Prenom'); // Envoyeur ('mail','NOM Prenom')
+    $mail->addAddress('receveur@gmail.com', 'NOM Prenom'); // Receveur ('mail','NOM Prenom)
 
     // Requête SQL pour récupérer les prospects "En cours"
     $sql = "SELECT nom,prenom,ville, numero_telephone, id_etat, date_creation FROM prospect WHERE id_etat = 1";
